@@ -232,7 +232,7 @@ public class odtwarzacz extends AppCompatActivity
     }
 
     public void saveTextToFileOnInternalStorage(){
-        //Lokalizacja : /data/data/com.example.sebastian.phonecatalog/files
+        
         saveInternalFile = (Button)findViewById(R.id.button8);
         saveInternalFile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -259,7 +259,7 @@ public class odtwarzacz extends AppCompatActivity
     }
 
     public void saveTextToFileOnSDcard(){
-        //Lokalizacja : /mnt/sdcard/PlikiAplikacji
+        
         saveSDFile = (Button) findViewById(R.id.button9);
         saveSDFile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -364,11 +364,11 @@ public class odtwarzacz extends AppCompatActivity
                 TextView tv = (TextView)findViewById(R.id. textView9);
                 tv.setText(emptyString);
 
-                //Usuwanie z pamięci wewnętrznej
+               
                 File directory = getFilesDir();
                 File file = new File(directory, "phoneNames.txt");
 
-                //Usuwanie z karty SD
+                
                 File sdCard = Environment.getExternalStorageDirectory();
                 File directorySD = new File(sdCard.getAbsolutePath() + "/PlikiAplikacji/");
                 File fileSD = new File(directorySD, "phoneNames.txt");
